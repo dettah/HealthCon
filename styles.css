@@ -1,0 +1,368 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Nav Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4CAF50;
+  padding: 1rem 2rem;
+}
+
+.logo a {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d3d3d3;
+}
+
+/* Hamburger menu (mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+
+
+
+/* Hero scetion */
+
+.hero-wrapper {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding-inline: 30px;
+  padding-top: 30px;
+}
+
+.hero {
+  padding-block: 55px;
+}
+
+.hero h1 {
+  font-size: 80px;
+  margin-block: 25px;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  height: 60px;
+  /* padding-right: 50px; */
+
+}
+
+.text {
+  border-right: 3px solid #45a049;
+  color: #45a049;
+  /* height: 150%; */
+
+}
+
+.hero p {
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-block: 10px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 28px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+}
+
+.hero-img {
+  display: flex;
+  align-items: center;
+}
+
+.hero-img img {
+  width: 45vw;
+  padding-top: 30px;
+}
+
+/* Doctor  */
+
+.doc-section {
+  background-color: #f3ebeb;
+  margin-top: 40px;
+  padding-block: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 20px;
+  /* color: #45a049; */
+}
+
+.doc-ph-img {
+  height: 70px;
+  margin-bottom: 50px;
+}
+
+.doc-section h2 {
+  font-size: 45px;
+}
+
+.find-doctor {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  width: 100%;
+  padding-block: 50px;
+
+}
+
+
+
+.find-doctor>div {
+  height: 300px;
+  /* border: 1px solid black; */
+  width: 350px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 15px rgba(185, 177, 177, 0.3);
+  padding: 20px;
+}
+
+.find-doctor-image {
+  border: 1px solid black;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.find-doctor-image img {
+  height: 100%;
+}
+
+.doc-section h3 {
+  font-size: 30px;
+}
+
+.find-doc-btn {
+  background-color: #45a049;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 13px 50px;
+  border-radius: 40px;
+  font-weight: bold;
+}
+
+.therapy-section {
+  background-color: #ffffff;
+}
+
+.get-therapy div {
+  background-color: #f3ebeb;
+}
+
+footer {
+  padding: 20px;
+  background-color: #45a049;
+  color: white;
+  display: flex;
+  gap: 30px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  
+}
+
+.social-icons img{
+  height: 30px;
+  border-radius: 10px;
+}
+
+/* Responsive D
+.esign */
+@media (max-width: 768px) {
+
+
+  /* Nav bar */
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #4CAF50;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in;
+  }
+
+  .nav-links li {
+    margin: 1.5rem 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  /* Hamburger animation */
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* }
+
+
+@media (max-width: 768px) { */
+
+  /* Hero Section  */
+
+  .hero-wrapper {
+    padding: 0px;
+  }
+
+  .hero-left {
+    padding-inline: 10px;
+    background-image: url('./assets/hero-doctor.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.616);
+    padding-bottom: 20px;
+    color: #ffffff;
+
+
+  }
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 3rem;
+  }
+
+  .hero-img {
+    display: none;
+  }
+
+  .text-container {
+    display: inline-block;
+    min-width: 50px;
+    text-align: left;
+    height: 20vh;
+
+  }
+
+  .text {
+    margin-top: 20px;
+    font-weight: bold;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .hero p {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+/* smaller screen */
+
+@media (max-width: 480px) {
+
+  /* Hero section */
+
+  .hero-wrapper {
+    padding-inline: 10px;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .btn {
+    width: fit-content;
+  }
+
+/* Find doctor section */
+  .find-doctor {
+    display: flex;
+    flex-direction: column;
+  }
+}

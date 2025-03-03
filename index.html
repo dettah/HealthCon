@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ibom ideas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+
+</head>
+
+<body>
+
+
+    <!-- Nav Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">HealthConnect</a>
+        </div>
+        <ul id="" class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="pages/find-doctor.html">Find a Doctor</a></li>
+            <li><a href="pages/therapy.html">Therapy</a></li>
+            <li><a href="pages/verify-presc.html">Verify Prescription</a></li>
+            <li><a href="pages/login.html">Login/Signup</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="hero-wrapper">
+        <div class="hero-left">
+            <div class="hero">
+                <h1>Healing Starts</h1>
+
+                <div class="text-container">
+                    <h1 class="text" id="text"></h1>
+                </div>
+
+                <p>Connect with trusted doctors, explore AI-based therapy, and verify prescriptions all in one place!
+                </p>
+            </div>
+            <div class="hero-buttons">
+                <a href="./pages/find-doctor.html" class="btn">Find a Doctor</a>
+                <a href="#" class="btn">Start Therapy</a>
+                <a href="#" class="btn">Verify Prescription</a>
+            </div>
+        </div>
+        <div class="hero-img">
+            <img src="./assets/hero-doctor.jpg" alt="Medical doctor hanging a stethescope">
+        </div>
+    </section>
+
+
+    <!-- services section -->
+    <!-- Find a doctor -->
+
+
+    <section class="doc-section">
+        <!-- <div class="find-doctor-wrapper"> -->
+        <img class="doc-ph-img" src="./assets/DR-ICON.png" alt="">
+
+        <h2>FIND A DOCTOR</h2>
+
+        <div class="find-doctor">
+            <div>
+                <div class="find-doctor-image">
+                    <img src="x" alt="Book a physical meeting with a doctor">
+                </div>
+                <h3>Book a physical meeting with a Doctor.</h3>
+            </div>
+            <div>
+                <div class="find-doctor-image">
+                    <img src="x" alt="Book a virtual meeting with a doctor">
+                </div>
+                <h3>Meet virtually with a certified Doctor.</h3>
+            </div>
+        </div>
+        <a class="find-doc-btn" href="./pages/find-doctor.html">Find a Doctor</a>
+        <!-- </div> -->
+
+
+    </section>
+
+    <!-- Get Therapy Section -->
+    <section class="doc-section therapy-section">
+        <h2>GET THERAPY</h2>
+        <div class="find-doctor get-therapy">
+            <div>
+                <div class="find-doctor-image get-therapy-image ">
+                    <img src="x" alt="Book a">
+                </div>
+                <h3>Get personalized therapy from our AI </h3>
+            </div>
+            <div>
+                <div class="find-doctor-image get-therapy-image">
+                    <img src="x" alt="Book a virtual meeting with a doctor">
+                </div>
+                <h3>Get real-time assistance, 24/7</h3>
+            </div>
+            <div>
+                <div class="find-doctor-image get-therapy-image">
+                    <img src="x" alt="Book a virtual meeting with a doctor">
+                </div>
+                <h3>Manage Anxiety with personalized generated images and music.</h3>
+            </div>
+        </div>
+        <a class="find-doc-btn get-therapy-btn" href="">Get Therapy</a>
+    </section>
+
+    <!-- Verifiy Prescription -->
+
+    <section class="doc-section ">
+        <h2>VERIFY PRESCRIPTION</h2>
+        <div class="find-doctor ">
+            <div>
+                <div class="find-doctor-image  ">
+                    <img src="x" alt="Book a">
+                </div>
+                <h3>Get personalized therapy from our AI </h3>
+            </div>
+            <div>
+                <div class="find-doctor-image ">
+                    <img src="x" alt="Book a virtual meeting with a doctor">
+                </div>
+                <h3>Get real-time assistance, 24/7</h3>
+            </div>
+            <div>
+                <div class="find-doctor-image ">
+                    <img src="x" alt="Book a virtual meeting with a doctor">
+                </div>
+                <h3>Manage Anxiety with personalized generated images and music.</h3>
+            </div>
+        </div>
+        <a class="find-doc-btn " href="">Get Therapy</a>
+    </section>
+
+    <script src='scripts.js'></script>
+    <script>
+        const texts = ["Here!", "Now!"];
+        let index = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingElement = document.getElementById("text");
+
+        function typeEffect() {
+            const currentText = texts[index];
+            if (isDeleting) {
+                charIndex--;
+            } else {
+                charIndex++;
+            }
+
+            typingElement.textContent = currentText.substring(0, charIndex);
+            typingElement.style.width = charIndex + "ch";
+
+            if (!isDeleting && charIndex === currentText.length) {
+                setTimeout(() => (isDeleting = true), 1000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                index = (index + 1) % texts.length;
+            }
+
+            setTimeout(typeEffect, isDeleting ? 25 : 350);
+        }
+
+        typeEffect();
+    </script>
+
+    <footer>
+        <section class="footer-left">
+            <h1>HealthConnect</h1>
+            <p>
+                <span>©️</span>
+                codeKrackerz
+            </p>
+        </section>
+
+        <section class="foooter-right">
+            <!-- socials -->
+
+            <div class="social-icons">
+                <img src="./assets/fb-icon.png" alt="Facebook icon">
+
+                <img src="./assets/x-icon.png" alt="X icon">
+
+                <img src="./assets/insta-icon.jpeg" alt="Instagram">
+            </div>
+            <p>info@healthconnect.com</p>
+        </section>
+    </footer>
+</body>
+
+</html>
